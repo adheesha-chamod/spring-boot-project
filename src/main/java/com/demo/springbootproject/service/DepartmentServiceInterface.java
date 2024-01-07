@@ -10,4 +10,6 @@ public interface DepartmentServiceInterface {
     public List<Department> getAllDepartments();
 
     public Department getDepartment(Long departmentId);
+
+    public void deleteDepartment(Long departmentId);
 }

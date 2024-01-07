@@ -28,4 +28,9 @@ public class DepartmentService implements DepartmentServiceInterface{
     public Department getDepartment(Long departmentId) {
         return departmentRepo.findById(departmentId).get();
     }
+
+    @Override
+    public void deleteDepartment(Long departmentId) {
+        departmentRepo.deleteById(departmentId);
+    }
 }
