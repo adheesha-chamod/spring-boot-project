@@ -31,7 +31,8 @@ public class DepartmentService implements DepartmentServiceInterface{
 
     @Override
     public List<Department> getDepartmentsByName(String departmentName) {
-        return departmentRepo.findAllByName(departmentName);
+//        return departmentRepo.findAllByName(departmentName);
+        return departmentRepo.findAllByNameIgnoreCase(departmentName);
     }
 
     @Override
