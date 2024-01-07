@@ -30,6 +30,25 @@ public class DepartmentService implements DepartmentServiceInterface{
     }
 
     @Override
+    public Department updateDepartment(Long departmentId, Department department) {
+        Department existingDepartment = departmentRepo.findById(departmentId).get();
+
+        if (department.getName() != null && department.getName() != "") {
+            existingDepartment.setName(department.getName());
+        }
+
+        if (department.getCode() != null && department.getCode() != "") {
+            existingDepartment.setCode(department.getCode());
+        }
+
+        if (department.getAddress() != null && department.getAddress() != "") {
+            existingDepartment.setAddress(department.getAddress());
+        }
+
+        return departmentRepo.save(existingDepartment);
+    }
+
+    @Override
     public void deleteDepartment(Long departmentId) {
         departmentRepo.deleteById(departmentId);
     }
