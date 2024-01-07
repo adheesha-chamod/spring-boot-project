@@ -23,4 +23,9 @@ public class DepartmentService implements DepartmentServiceInterface{
     public List<Department> getAllDepartments() {
         return departmentRepo.findAll();
     }
+
+    @Override
+    public Department getDepartment(Long departmentId) {
+        return departmentRepo.findById(departmentId).get();
+    }
 }

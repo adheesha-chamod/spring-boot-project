@@ -8,4 +8,6 @@ public interface DepartmentServiceInterface {
     public Department addDepartment(Department department);
 
     public List<Department> getAllDepartments();
+
+    public Department getDepartment(Long departmentId);
 }
