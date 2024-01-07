@@ -30,6 +30,11 @@ public class DepartmentService implements DepartmentServiceInterface{
     }
 
     @Override
+    public List<Department> getDepartmentsByName(String departmentName) {
+        return departmentRepo.findAllByName(departmentName);
+    }
+
+    @Override
     public Department updateDepartment(Long departmentId, Department department) {
         Department existingDepartment = departmentRepo.findById(departmentId).get();
 
