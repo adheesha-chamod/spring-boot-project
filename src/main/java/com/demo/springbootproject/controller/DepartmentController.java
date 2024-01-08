@@ -1,6 +1,7 @@
 package com.demo.springbootproject.controller;
 
 import com.demo.springbootproject.entity.Department;
+import com.demo.springbootproject.exception.DepartmentNotFoundException;
 import com.demo.springbootproject.service.DepartmentService;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
@@ -42,7 +43,7 @@ public class DepartmentController {
     }
 
     @GetMapping("/departments/{id}")
-    public Department getDepartment(@PathVariable("id") Long departmentId) {
+    public Department getDepartment(@PathVariable("id") Long departmentId) throws DepartmentNotFoundException {
         LOGGER.info("getDepartment of DepartmentController called");
 
         return departmentService.getDepartment(departmentId);
