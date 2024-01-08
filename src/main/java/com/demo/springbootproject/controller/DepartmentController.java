@@ -20,7 +20,7 @@ public class DepartmentController {
 
     @PostMapping("/departments")
     public Department saveDepartment(@Valid @RequestBody Department department) {
-        LOGGER.info("Inside in saveDepartment of DepartmentController");
+        LOGGER.info("saveDepartment of DepartmentController called");
 
         return departmentService.addDepartment(department);
     }
@@ -32,7 +32,7 @@ public class DepartmentController {
 
     @GetMapping("/departments")
     public List<Department> getAllDepartments(@RequestParam(name = "name", required = false) String departmentName) {
-        LOGGER.info("Inside in getAllDepartments of DepartmentController");
+        LOGGER.info("getAllDepartments of DepartmentController called");
 
         if (departmentName != null && departmentName != "") {
             return departmentService.getDepartmentsByName(departmentName);
@@ -43,7 +43,7 @@ public class DepartmentController {
 
     @GetMapping("/departments/{id}")
     public Department getDepartment(@PathVariable("id") Long departmentId) {
-        LOGGER.info("Inside in getDepartment of DepartmentController");
+        LOGGER.info("getDepartment of DepartmentController called");
 
         return departmentService.getDepartment(departmentId);
     }
@@ -51,14 +51,14 @@ public class DepartmentController {
     @PutMapping("/departments/{id}")
     public Department updateDepartment(@PathVariable("id") Long departmentId,
                                        @RequestBody Department department) {
-        LOGGER.info("Inside in updateDepartment of DepartmentController");
+        LOGGER.info("updateDepartment of DepartmentController called");
 
         return departmentService.updateDepartment(departmentId, department);
     }
 
     @DeleteMapping("/departments/{id}")
     public String deleteDepartment(@PathVariable("id") Long departmentId) {
-        LOGGER.info("Inside in deleteDepartment of DepartmentController");
+        LOGGER.info("deleteDepartment of DepartmentController called");
 
         departmentService.deleteDepartment(departmentId);
         return "Department deleted successfully";
