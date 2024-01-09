@@ -36,8 +36,7 @@ class DepartmentServiceInterfaceTest {
         Mockito.when(departmentRepo.findById(1L))
                 .thenReturn(Optional.ofNullable(department));
     }
-
-    // test the getDepartment() method in DepartmentServiceInterface
+    
     @Test
     @DisplayName("Test getDepartment() method")
     public void whenValidDepartment_thenDepartmentShouldBeFound() throws DepartmentNotFoundException {
