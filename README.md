@@ -1,6 +1,7 @@
 # Department Manager
 
 A simple project with basic CRUD operations to manage Departments, implemented using Spring Boot 3.
+Custom exception handling and unit testing are also included.
 
 ## Requirements
 
