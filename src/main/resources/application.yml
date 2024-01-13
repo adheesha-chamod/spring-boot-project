@@ -14,6 +14,13 @@ spring:
       ddl-auto: update
     show-sql: true
 
+management:
+  endpoint:
+    web:
+        exposure:
+            include: "*"
+            exclude: "env"
+
 test:
   application:
     properties: This is a test message from application.properties
