@@ -1,0 +1,29 @@
+server:
+  port: '8000'
+
+#spring:
+#  h2:
+#    console:
+#      enabled: 'true'
+#  datasource:
+#    username: root
+#    url: jdbc:h2:mem:testdb
+#    driverClassName: org.h2.Driver
+#    password: testdb
+#  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/project_spring_boot?createDatabaseIfNotExist=true
+    password: ''
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+
+test:
+  application:
+    properties: This is a test message from application.properties
