@@ -20,7 +20,7 @@ For building and running the application you need:
 Clone the repository using Git Bash for your desired location.
 
 ```
-git clone https://github.com/adheesha-chamod/spring-boot-project/tree/main
+git clone https://github.com/adheesha-chamod/spring-boot-project.git
 ```
 
 ### 2. Open the project in IntelliJ IDEA
