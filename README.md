@@ -1,6 +1,6 @@
 # Department Manager
 
-A simple project with basic CRUD operations to manage Departments, implemented using Spring Boot 3
+A simple project with basic CRUD operations to manage Departments, implemented using Spring Boot 3.
 
 ## Requirements
 
