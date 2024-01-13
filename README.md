@@ -27,9 +27,9 @@ git clone https://github.com/adheesha-chamod/spring-boot-project.git
 
 ### 3. Start the MySQL and Apache servers
 
-Start the MySQL and Apache servers using XAMPP.
-MySQL server has to run on port 3306.
-Use following URL to access the phpMyAdmin.
+Start the MySQL and Apache servers using XAMPP. MySQL server has to run on port 3306.
+
+Access phpMyAdmin using the following URL:
 
 ```
 http://localhost/phpmyadmin/
